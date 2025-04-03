@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bq605hy4qsdt1"]
+
+[ext_resource type="PackedScene" uid="uid://m7tpc4uyuwit" path="res://Scenes/player.tscn" id="1_frf35"]
+[ext_resource type="Script" uid="uid://b60gucr2dsqre" path="res://Scenes/player.gd" id="2_ybmw1"]
+[ext_resource type="Texture2D" uid="uid://815n16gyixt8" path="res://Assets/icon.svg" id="2_yprpe"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bqqt8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_frf35")]
+position = Vector2(589, 157)
+script = ExtResource("2_ybmw1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(586, 298)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(0, 266)
+scale = Vector2(10.2174, 4.16)
+texture = ExtResource("2_yprpe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_bqqt8")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://m7tpc4uyuwit"]
+
+[ext_resource type="Texture2D" uid="uid://w13germ5x8ff" path="res://Assets/alienguywithguy.png" id="2_i3pqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
+size = Vector2(43, 54)
+
+[node name="Player" type="CharacterBody2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_i3pqv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -3)
+shape = SubResource("RectangleShape2D_hqtel")
