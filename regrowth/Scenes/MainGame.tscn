@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bq605hy4qsdt1"]
 
 [ext_resource type="PackedScene" uid="uid://m7tpc4uyuwit" path="res://Scenes/player.tscn" id="1_frf35"]
-[ext_resource type="Script" uid="uid://b60gucr2dsqre" path="res://Scenes/player.gd" id="2_ybmw1"]
+[ext_resource type="Script" uid="uid://b60gucr2dsqre" path="res://Scripts/player.gd" id="2_ybmw1"]
 [ext_resource type="Texture2D" uid="uid://815n16gyixt8" path="res://Assets/icon.svg" id="2_yprpe"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bqqt8"]
@@ -11,6 +11,23 @@
 [node name="Player" parent="." instance=ExtResource("1_frf35")]
 position = Vector2(589, 157)
 script = ExtResource("2_ybmw1")
+walk_speed = 250.0
+run_speed = 450.0
+deceleration = 0.08
+jump_force = -575.0
+decelerate_on_jump_release = 0.3
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2, 2)
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 25.55
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.05
+drag_top_margin = 0.1
+drag_right_margin = 0.05
+drag_bottom_margin = 0.1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(586, 298)

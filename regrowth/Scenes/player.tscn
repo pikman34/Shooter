@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://m7tpc4uyuwit"]
+[gd_scene load_steps=4 format=3 uid="uid://m7tpc4uyuwit"]
 
+[ext_resource type="Script" uid="uid://b60gucr2dsqre" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://w13germ5x8ff" path="res://Assets/alienguywithguy.png" id="2_i3pqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
@@ -7,6 +8,7 @@ size = Vector2(43, 54)
 
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
+script = ExtResource("1_cvnsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_i3pqv")
