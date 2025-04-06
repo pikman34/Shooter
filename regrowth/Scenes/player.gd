@@ -21,5 +21,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if Input.is_action_pressed("Left"):
+		$Sprite2D.flip_h = true
+	if Input.is_action_pressed("Right"):
+		$Sprite2D.flip_h = false
 
 	move_and_slide()
