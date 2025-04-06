@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7asnd5h7kyq6"]
+
+[ext_resource type="Script" uid="uid://cuk5qwjbvfrq" path="res://wand.gd" id="1_tqelj"]
+[ext_resource type="Texture2D" uid="uid://cnaft0d1ioqy5" path="res://Assets/pngtree-magician-wand-with-star-png-image_6026697.png" id="2_5jft5"]
+
+[node name="Gun" type="Node2D"]
+script = ExtResource("1_tqelj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 0.698132
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("2_5jft5")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(3, 0)
+
+[node name="shotSpeedTimer" type="Timer" parent="."]
