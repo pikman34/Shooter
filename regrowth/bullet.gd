@@ -5,6 +5,10 @@ extends Area2D
 
 var direction:Vector2
 
+func _ready():
+	await get_tree().create_timer(3).timeout
+	queue_free()
+
 func set_direction(bulletDirection):
 	direction = bulletDirection
 	rotation_degrees = rad_to_deg(global_position.angle_to_point(global_position+direction))
