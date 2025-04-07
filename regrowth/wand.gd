@@ -9,7 +9,7 @@ var canShoot = true
 var bulletDirection = Vector2(1,0)
 
 func _ready():
-	shoot_speed_timer.wait_time = 1.0 / shotSpeed
+	shoot_speed_timer.wait_time = 0.5 / shotSpeed
 	
 func shoot():
 	if canShoot:
@@ -25,18 +25,18 @@ func shoot():
 func _on_shot_speed_timer_timeout() -> void:
 	canShoot = true
 	
-func setup_direction(direction):
-	bulletDirection = direction
+func setup_direction(shootdir):
+	bulletDirection = shootdir
 	
-	if direction.x > 0:
+	if shootdir.x > 0:
 		scale.x = 1
 		rotation_degrees = 0
-	elif direction.x < 0:
+	elif shootdir.x < 0:
 		scale.x = -1
 		rotation_degrees = 0
-	elif direction.y < 0:
+	elif shootdir.y < 0:
 		scale.x = 1
 		rotation_degrees = -90
-	elif direction.y > 0:
+	elif shootdir.y > 0:
 		scale.x = 1
 		rotation_degrees = 90

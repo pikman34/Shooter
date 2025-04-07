@@ -7,12 +7,13 @@
 script = ExtResource("1_tqelj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(15.359, 4.35898)
 rotation = 0.698132
-scale = Vector2(0.01, 0.01)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_5jft5")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(3, 0)
+position = Vector2(41, 5)
 
 [node name="shotSpeedTimer" type="Timer" parent="."]
 

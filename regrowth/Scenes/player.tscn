@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://m7tpc4uyuwit"]
+[gd_scene load_steps=5 format=3 uid="uid://m7tpc4uyuwit"]
 
 [ext_resource type="Script" uid="uid://b60gucr2dsqre" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://w13germ5x8ff" path="res://Assets/alienguywithguy.png" id="2_i3pqv"]
+[ext_resource type="PackedScene" uid="uid://c7asnd5h7kyq6" path="res://Scenes/wand.tscn" id="3_6t5aa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
-size = Vector2(43, 54)
+size = Vector2(27, 47)
 
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
@@ -14,5 +15,7 @@ script = ExtResource("1_cvnsp")
 texture = ExtResource("2_i3pqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, -3)
+position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_hqtel")
+
+[node name="Gun" parent="." instance=ExtResource("3_6t5aa")]
