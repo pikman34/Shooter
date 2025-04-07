@@ -32,5 +32,4 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, direction * speed, speed * accelertation)
 	else:
 		velocity.x = move_toward(velocity.x, 0, walk_speed * deceleration)
-
 	move_and_slide()
