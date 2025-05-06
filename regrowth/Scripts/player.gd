@@ -43,6 +43,18 @@ func _physics_process(delta):
 	
 	if shootdir != Vector2.ZERO:
 		gun.setup_direction(shootdir)
+		
+	
+	
+	if shootdir.y < 0:
+		$Sprite/PlayerAnimation.play("lookup")
+	elif shootdir.y > 0:
+		$Sprite/PlayerAnimation.play("lookdown")
+	else:
+		$Sprite/PlayerAnimation.play("RESET")
+		
+	
+	
 	
 	
 	move_and_slide()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nrhjphni875d"
-path="res://.godot/imported/lasergun.png-19edc73cb48bcf6591735ea873a52359.ctex"
+uid="uid://dg43cciofxift"
+path="res://.godot/imported/glorpshituslookup.png-e5319f65604fbe091cd9b3663705af19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/lasergun.png"
-dest_files=["res://.godot/imported/lasergun.png-19edc73cb48bcf6591735ea873a52359.ctex"]
+source_file="res://Assets/Sprites/glorpshituslookup.png"
+dest_files=["res://.godot/imported/glorpshituslookup.png-e5319f65604fbe091cd9b3663705af19.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w13germ5x8ff"
-path="res://.godot/imported/alienguywithguy.png-303e3307db7b7ede8eaee9330b3f6822.ctex"
+uid="uid://nrhjphni875d"
+path="res://.godot/imported/lasergun.png-85f081dca9a3f24da17b80626aac8659.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/alienguywithguy.png"
-dest_files=["res://.godot/imported/alienguywithguy.png-303e3307db7b7ede8eaee9330b3f6822.ctex"]
+source_file="res://Assets/TestSprites/lasergun.png"
+dest_files=["res://.godot/imported/lasergun.png-85f081dca9a3f24da17b80626aac8659.ctex"]
 
 [params]
 

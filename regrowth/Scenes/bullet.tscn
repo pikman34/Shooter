@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmm6pt01i77hr"]
 
 [ext_resource type="Script" uid="uid://b8dfyd581j57" path="res://bullet.gd" id="1_v8qja"]
-[ext_resource type="Texture2D" uid="uid://gj0mkq1e03yx" path="res://Assets/pngtree-sun-png-clipart-colored-png-image_5656301.png" id="2_t4vbm"]
+[ext_resource type="Texture2D" uid="uid://gj0mkq1e03yx" path="res://Assets/TestSprites/pngtree-sun-png-clipart-colored-png-image_5656301.png" id="2_t4vbm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2b2rl"]
 radius = 4.12311

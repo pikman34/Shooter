@@ -12,7 +12,13 @@ config_version=5
 
 config/name="Regrowth"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://Assets/icon.svg"
+config/icon="res://Assets/TestSprites/icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
 
 [input]
 

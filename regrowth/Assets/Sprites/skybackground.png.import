@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnaft0d1ioqy5"
-path="res://.godot/imported/pngtree-magician-wand-with-star-png-image_6026697.png-84612eedb67dcc314936d9ad349e8451.ctex"
+uid="uid://dx0ob2u7tsohr"
+path="res://.godot/imported/skybackground.png-4abd49e38bc0a6c5a534afcc084260ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/pngtree-magician-wand-with-star-png-image_6026697.png"
-dest_files=["res://.godot/imported/pngtree-magician-wand-with-star-png-image_6026697.png-84612eedb67dcc314936d9ad349e8451.ctex"]
+source_file="res://Assets/Sprites/skybackground.png"
+dest_files=["res://.godot/imported/skybackground.png-4abd49e38bc0a6c5a534afcc084260ee.ctex"]
 
 [params]
 

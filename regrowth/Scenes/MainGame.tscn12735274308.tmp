@@ -11,7 +11,7 @@
 script = ExtResource("1_ybmw1")
 
 [node name="Player" parent="." instance=ExtResource("1_frf35")]
-position = Vector2(623, 178)
+position = Vector2(589, 157)
 walk_speed = 250.0
 run_speed = 450.0
 deceleration = 0.08
