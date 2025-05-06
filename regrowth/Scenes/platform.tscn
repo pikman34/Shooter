@@ -20,6 +20,16 @@ texture_filter = 1
 position = Vector2(-1, 62)
 texture = ExtResource("2_mrs20")
 
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-2, 125.333)
+texture = ExtResource("2_mrs20")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-4, 187.667)
+texture = ExtResource("2_mrs20")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(13.75, 37)
 shape = SubResource("RectangleShape2D_mlqre")

@@ -10,7 +10,7 @@ script = ExtResource("1_ybmw1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(587, 53)
-zoom = Vector2(3, 3)
+zoom = Vector2(2.5, 2.5)
 process_callback = 0
 position_smoothing_speed = 25.55
 drag_left_margin = 0.05
