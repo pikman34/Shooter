@@ -1,3 +1,25 @@
-[gd_scene format=3 uid="uid://cq62wrqbg76cu"]
+[gd_scene load_steps=4 format=3 uid="uid://cq62wrqbg76cu"]
+
+[ext_resource type="Texture2D" uid="uid://bh3np7md8bt2k" path="res://Assets/Sprites/leafplatform.png" id="1_n5262"]
+[ext_resource type="Texture2D" uid="uid://b65syqba0d2nl" path="res://Assets/Sprites/plantstem.png" id="2_mrs20"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlqre"]
+size = Vector2(309.5, 56)
 
 [node name="Platform" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(0, 70)
+scale = Vector2(3, 3)
+texture = ExtResource("1_n5262")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1, 62)
+texture = ExtResource("2_mrs20")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(13.75, 37)
+shape = SubResource("RectangleShape2D_mlqre")

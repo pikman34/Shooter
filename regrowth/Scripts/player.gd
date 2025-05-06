@@ -8,6 +8,7 @@ extends CharacterBody2D
 @export var jump_force = -400.0
 @export_range(0, 1) var decelerate_on_jump_release = 0.5
 @onready var gun = $Gun
+@onready var camera = $"../Camera2D"
 
 var shootdir = Vector2.ZERO
 
@@ -15,6 +16,8 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	
+	camera.position = position
 	
 	if Input.is_action_pressed("Shoot"):
 		gun.shoot()
