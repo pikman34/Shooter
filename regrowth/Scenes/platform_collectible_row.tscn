@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcan522lielym"]
+
+[ext_resource type="Texture2D" uid="uid://bh3np7md8bt2k" path="res://Assets/Sprites/leafplatform.png" id="1_nojru"]
+[ext_resource type="Texture2D" uid="uid://b65syqba0d2nl" path="res://Assets/Sprites/plantstem.png" id="2_te2ks"]
+[ext_resource type="PackedScene" uid="uid://d0svkk16pwex1" path="res://Scenes/collectible.tscn" id="3_lmgvh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlqre"]
+size = Vector2(309.5, 56)
+
+[node name="Platform" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(0, 70)
+scale = Vector2(3, 3)
+texture = ExtResource("1_nojru")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1, 62)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66667, 125)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66667, 188.667)
+texture = ExtResource("2_te2ks")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(13.75, 37)
+shape = SubResource("RectangleShape2D_mlqre")
+
+[node name="Collectible" parent="." instance=ExtResource("3_lmgvh")]
+position = Vector2(-117, -25)
+
+[node name="Collectible6" parent="." instance=ExtResource("3_lmgvh")]
+position = Vector2(-76, -25)
+
+[node name="Collectible7" parent="." instance=ExtResource("3_lmgvh")]
+position = Vector2(9, -25)
+
+[node name="Collectible2" parent="." instance=ExtResource("3_lmgvh")]
+position = Vector2(-35, -25)
+
+[node name="Collectible3" parent="." instance=ExtResource("3_lmgvh")]
+position = Vector2(55, -25)
+
+[node name="Collectible4" parent="." instance=ExtResource("3_lmgvh")]
+position = Vector2(102, -25)
+
+[node name="Collectible5" parent="." instance=ExtResource("3_lmgvh")]
+position = Vector2(147, -25)

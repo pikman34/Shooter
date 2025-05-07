@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://d0svkk16pwex1"]
 
-[ext_resource type="Script" uid="uid://qdcxaogr3noa" path="res://Scenes/collectible.gd" id="1_athsx"]
+[ext_resource type="Script" uid="uid://qdcxaogr3noa" path="res://Scripts/collectible.gd" id="1_athsx"]
 [ext_resource type="Texture2D" uid="uid://8khowjd7oh1p" path="res://Assets/SpriteSheets/CollectibleSprites/collectiblecollectedspritesheet.png" id="2_7xeth"]
 [ext_resource type="Texture2D" uid="uid://bmv22u1fol3lh" path="res://Assets/SpriteSheets/CollectibleSprites/collectiblespritesheet.png" id="3_ixlk2"]
 
@@ -83,7 +83,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"collected",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 2.0,
@@ -127,7 +127,6 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_210ta")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.23795
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -0.75)

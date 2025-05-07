@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://djtxd5pq3nev7"]
+
+[ext_resource type="Texture2D" uid="uid://bh3np7md8bt2k" path="res://Assets/Sprites/leafplatform.png" id="1_jh134"]
+[ext_resource type="Texture2D" uid="uid://b65syqba0d2nl" path="res://Assets/Sprites/plantstem.png" id="2_pwyf3"]
+[ext_resource type="PackedScene" uid="uid://d0svkk16pwex1" path="res://Scenes/collectible.tscn" id="3_pwyf3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlqre"]
+size = Vector2(309.5, 56)
+
+[node name="Platform" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(0, 70)
+scale = Vector2(3, 3)
+texture = ExtResource("1_jh134")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1, 62)
+texture = ExtResource("2_pwyf3")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66667, 125)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_pwyf3")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66667, 188.667)
+texture = ExtResource("2_pwyf3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(13.75, 37)
+shape = SubResource("RectangleShape2D_mlqre")
+
+[node name="Collectible" parent="." instance=ExtResource("3_pwyf3")]
+position = Vector2(7, -23)

@@ -1,11 +1,18 @@
 extends Node2D
 
 @export var world_speed = 50
+@export var collectible_pitch_reset_interval = 2000
 
 @onready var moving_environment = $Environment/Moving
 @onready var collect_sound = $Sounds/CollectSound
+@onready var score_label = $"/root/World/HUD/UI/Score"
+
 
 var platform = preload("res://Scenes/platform.tscn")
+var platform_collectible_single = preload("res://Scenes/platform_collectible_single.tscn")
+var platform_collectible_row = preload("res://Scenes/platform_collectible_row.tscn")
+var platform_collectible_rainbow = preload("res://Scenes/platform_collectible_rainbow.tscn")
+var platform_enemy = preload("res://Scenes/platform_enemy.tscn")
 var rng = RandomNumberGenerator.new()
 var last_platform_position = Vector2.ZERO
 var next_spawn_time = 0
@@ -24,8 +31,19 @@ func _process(delta):
 	if Time.get_ticks_msec() > next_spawn_time:
 		_spawn_next_platform()
 		
+	score_label.text = "Score: %s" % score
+
 func _spawn_next_platform():
-	var new_platform = platform.instantiate()
+	var available_platforms = [
+		platform,
+		platform_collectible_single,
+		platform_collectible_row,
+		platform_collectible_rainbow,
+		platform_enemy
+	]
+	
+	var platform_index = rng.randi_range(0, available_platforms.size() - 1)
+	var new_platform = available_platforms[platform_index].instantiate()
 		
 	if last_platform_position == Vector2.ZERO:
 		new_platform.position = Vector2(400, 0)
@@ -44,4 +62,7 @@ func _physics_process(delta):
 
 func add_score(value):
 	score += value
-	print(score)
+	collect_sound.set_pitch_scale(collectible_pitch)
+	collect_sound.play()
+	collectible_pitch += 0.1
+	reset_collectible_pitch_time = Time.get_ticks_msec() + collectible_pitch_reset_interval
