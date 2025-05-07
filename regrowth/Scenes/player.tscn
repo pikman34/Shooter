@@ -60,8 +60,10 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
 size = Vector2(18, 50)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 texture_filter = 1
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_cvnsp")
 
 [node name="Sprite" type="Sprite2D" parent="."]
