@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://m7tpc4uyuwit"]
+[gd_scene load_steps=11 format=3 uid="uid://m7tpc4uyuwit"]
 
 [ext_resource type="Script" uid="uid://b60gucr2dsqre" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://indmaffmvfr6" path="res://Assets/Sprites/glortpopspriuitesheet.png" id="2_6t5aa"]
 [ext_resource type="PackedScene" uid="uid://c7asnd5h7kyq6" path="res://Scenes/wand.tscn" id="3_6t5aa"]
+[ext_resource type="AudioStream" uid="uid://edpeech20pn" path="res://Sounds/jump.mp3" id="4_vgqql"]
+[ext_resource type="AudioStream" uid="uid://d32gumefshyn" path="res://Sounds/boom.mp3" id="5_fkybt"]
 
 [sub_resource type="Animation" id="Animation_fkybt"]
 length = 0.001
@@ -83,3 +85,9 @@ shape = SubResource("RectangleShape2D_hqtel")
 
 [node name="Gun" parent="." instance=ExtResource("3_6t5aa")]
 position = Vector2(12, -2)
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_vgqql")
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_fkybt")

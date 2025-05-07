@@ -1,12 +1,15 @@
 extends Node2D
 
+signal game_over
+
 @export var world_speed = 50
 @export var collectible_pitch_reset_interval = 2000
 
 @onready var moving_environment = $Environment/Moving
 @onready var collect_sound = $Sounds/CollectSound
 @onready var score_label = $"/root/World/HUD/UI/Score"
-
+@onready var player = $"/root/World/Player"
+@onready var ground = $"/root/World/Environment/Static/Ground"
 
 var platform = preload("res://Scenes/platform.tscn")
 var platform_collectible_single = preload("res://Scenes/platform_collectible_single.tscn")
@@ -22,8 +25,13 @@ var reset_collectible_pitch_time = 0
 
 func _ready():
 	rng.randomize()
+	player.player_died.connect(_on_player_died)
 	
 func _process(delta):
+	if not player.active:
+		return
+	
+	
 	if Time.get_ticks_msec() > reset_collectible_pitch_time:
 		collectible_pitch = 1.0
 	
@@ -58,6 +66,10 @@ func _spawn_next_platform():
 	next_spawn_time += world_speed
 
 func _physics_process(delta):
+	if not player.active:
+		return
+	
+	
 	moving_environment.position.x -= world_speed * delta
 
 func add_score(value):
@@ -66,3 +78,6 @@ func add_score(value):
 	collect_sound.play()
 	collectible_pitch += 0.1
 	reset_collectible_pitch_time = Time.get_ticks_msec() + collectible_pitch_reset_interval
+	
+func _on_player_died():
+	emit_signal("game_over")

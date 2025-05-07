@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bq605hy4qsdt1"]
+[gd_scene load_steps=10 format=3 uid="uid://bq605hy4qsdt1"]
 
 [ext_resource type="PackedScene" uid="uid://m7tpc4uyuwit" path="res://Scenes/player.tscn" id="1_frf35"]
 [ext_resource type="Script" uid="uid://go07anvlu5n2" path="res://Scripts/game.gd" id="1_ybmw1"]
@@ -9,7 +9,9 @@
 [ext_resource type="AudioStream" uid="uid://dxqqigq2c8eny" path="res://Sounds/collect.mp3" id="6_d4f28"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvfik"]
-size = Vector2(904, 507)
+size = Vector2(949, 583.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iuea6"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_ybmw1")
@@ -44,14 +46,20 @@ decelerate_on_jump_release = 0.3
 [node name="Static" type="Node2D" parent="Environment"]
 
 [node name="PlayArea" type="Area2D" parent="Environment/Static"]
-position = Vector2(-591, -18)
-collision_layer = 5
+collision_layer = 7
 collision_mask = 4
 script = ExtResource("4_iuea6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Static/PlayArea"]
-position = Vector2(588, 57.5)
+position = Vector2(1, 21.25)
 shape = SubResource("RectangleShape2D_kvfik")
+
+[node name="Ground" type="Area2D" parent="Environment/Static"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Static/Ground"]
+position = Vector2(0, 2000)
+scale = Vector2(300000, 1)
+shape = SubResource("RectangleShape2D_iuea6")
 
 [node name="Moving" type="Node2D" parent="Environment"]
 

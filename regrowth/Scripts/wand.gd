@@ -4,6 +4,7 @@ extends Node2D
 const BULLET = preload("res://Scenes/bullet.tscn")
 @onready var marker_2d = $Marker2D
 @onready var shoot_speed_timer = $shotSpeedTimer
+@onready var wand_sound = $WandShoot
 
 var canShoot = true
 var bulletDirection = Vector2(1,0)
@@ -13,6 +14,7 @@ func _ready():
 	
 func shoot():
 	if canShoot:
+		wand_sound.play()
 		canShoot = false
 		shoot_speed_timer.start()
 		

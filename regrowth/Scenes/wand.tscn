@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7asnd5h7kyq6"]
+[gd_scene load_steps=4 format=3 uid="uid://c7asnd5h7kyq6"]
 
 [ext_resource type="Script" uid="uid://cuk5qwjbvfrq" path="res://Scripts/wand.gd" id="1_tqelj"]
 [ext_resource type="Texture2D" uid="uid://vilbyb6yiqhh" path="res://Assets/Sprites/wand.png" id="2_bcswe"]
+[ext_resource type="AudioStream" uid="uid://dme7gssjyc71v" path="res://Sounds/159565__sergeeo__magic-wand.mp3" id="3_spax2"]
 
 [node name="Gun" type="Node2D"]
 script = ExtResource("1_tqelj")
@@ -15,5 +16,10 @@ texture = ExtResource("2_bcswe")
 position = Vector2(41, 5)
 
 [node name="shotSpeedTimer" type="Timer" parent="."]
+
+[node name="WandShoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_spax2")
+volume_db = -5.0
+pitch_scale = 0.8
 
 [connection signal="timeout" from="shotSpeedTimer" to="." method="_on_shot_speed_timer_timeout"]
