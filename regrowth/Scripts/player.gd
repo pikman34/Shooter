@@ -55,7 +55,10 @@ func _physics_process(delta):
 		$Sprite/PlayerAnimation.play("lookdown")
 	else:
 		$Sprite/PlayerAnimation.play("RESET")
-		
+	if shootdir.x < 0:
+		$Sprite.flip_h = true
+	if shootdir.x > 0:
+		$Sprite.flip_h = false
 	
 	
 	

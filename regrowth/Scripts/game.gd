@@ -27,7 +27,7 @@ func _spawn_next_platform():
 		new_platform.position = Vector2(x, y)
 		
 	moving_environment.add_child(new_platform)
-		
+	
 	last_platform_position = new_platform.position
 	next_spawn_time += world_speed
 

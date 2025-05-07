@@ -31,9 +31,11 @@ func setup_direction(shootdir):
 	if shootdir.x > 0:
 		scale.x = 1
 		rotation_degrees = 0
+		position.x = 12
 	elif shootdir.x < 0:
 		scale.x = -1
 		rotation_degrees = 0
+		position.x = -14
 	elif shootdir.y < 0:
 		scale.x = 1
 		rotation_degrees = -90
