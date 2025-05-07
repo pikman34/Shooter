@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Regrowth"
+run/main_scene="uid://dlder3g3veat5"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Assets/TestSprites/icon.svg"
+
+[autoload]
+
+Music="*res://Scenes/music.tscn"
 
 [display]
 
@@ -24,6 +29,8 @@ window/stretch/mode="viewport"
 
 player=""
 enemy=""
+platform=""
+collectible=""
 
 [input]
 

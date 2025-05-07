@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var sprite = $AnimatedSprite2D
 @onready var hitbox = $Hitbox
 @onready var player = $"/root/World/Player"
+@onready var death_sound = $DeathSound
 
 var active = false
 var gravity = 16000
@@ -40,3 +41,12 @@ func _on_body_entered(body):
 func _on_player_died():
 	set_active(false)
 	sprite.play("idle")
+	
+func die():
+	death_sound.play()
+	sprite.play("defeat")
+	set_active(false)
+	sprite.animation_finished.connect(_on_animation_finished)
+	
+func _on_animation_finished():
+	queue_free()

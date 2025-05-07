@@ -10,6 +10,7 @@ signal game_over
 @onready var score_label = $"/root/World/HUD/UI/Score"
 @onready var player = $"/root/World/Player"
 @onready var ground = $"/root/World/Environment/Static/Ground"
+@onready var gameover_label = $"/root/World/HUD/UI/GameOver"
 
 var platform = preload("res://Scenes/platform.tscn")
 var platform_collectible_single = preload("res://Scenes/platform_collectible_single.tscn")
@@ -26,10 +27,14 @@ var reset_collectible_pitch_time = 0
 func _ready():
 	rng.randomize()
 	player.player_died.connect(_on_player_died)
+	ground.body_entered.connect(_on_ground_body_entered)
 	
 func _process(delta):
 	if not player.active:
+		if Input.is_action_just_pressed("Jump"):
+			get_tree().reload_current_scene()
 		return
+	
 	
 	
 	if Time.get_ticks_msec() > reset_collectible_pitch_time:
@@ -81,3 +86,9 @@ func add_score(value):
 	
 func _on_player_died():
 	emit_signal("game_over")
+	gameover_label.text = gameover_label.text % score
+	gameover_label.set_visible(true)
+
+func _on_ground_body_entered(body):
+	if body.is_in_group("player"):
+		player.die()

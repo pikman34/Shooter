@@ -14,6 +14,7 @@ signal player_died
 @onready var death_sound = $DeathSound
 @onready var collision_shape = $CollisionShape2D
 @onready var play_area = $"../Environment/Static/PlayArea"
+@onready var ground = $"/root/World/Environment/Static/Ground"
 
 var active = true
 var shootdir = Vector2.ZERO
@@ -26,6 +27,7 @@ func _physics_process(delta):
 	if active: 
 		camera.position = position
 		play_area.position = position
+		ground.position.x = position.x
 		
 		if Input.is_action_pressed("Shoot"):
 			gun.shoot()

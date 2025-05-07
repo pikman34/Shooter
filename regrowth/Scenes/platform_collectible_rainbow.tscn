@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mlqre"]
 size = Vector2(309.5, 56)
 
-[node name="Platform" type="StaticBody2D"]
+[node name="Platform" type="StaticBody2D" groups=["platform"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
@@ -33,27 +33,123 @@ texture_filter = 1
 position = Vector2(-1.66667, 188.667)
 texture = ExtResource("2_042np")
 
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 250)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_042np")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 313.667)
+texture = ExtResource("2_042np")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 372.667)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_042np")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 436.334)
+texture = ExtResource("2_042np")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 488)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_042np")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 551.667)
+texture = ExtResource("2_042np")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 613.333)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_042np")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 677)
+texture = ExtResource("2_042np")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 736)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_042np")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 799.667)
+texture = ExtResource("2_042np")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 862.667)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_042np")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 926.334)
+texture = ExtResource("2_042np")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 988)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_042np")
+
+[node name="Sprite2D17" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 1051.67)
+texture = ExtResource("2_042np")
+
+[node name="Sprite2D18" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 1114.67)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_042np")
+
+[node name="Sprite2D19" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 1178.33)
+texture = ExtResource("2_042np")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(13.75, 37)
 shape = SubResource("RectangleShape2D_mlqre")
 
-[node name="Collectible" parent="." instance=ExtResource("3_yiedb")]
+[node name="Collectible" parent="." groups=["collectible"] instance=ExtResource("3_yiedb")]
 position = Vector2(-117, -25)
 
-[node name="Collectible6" parent="." instance=ExtResource("3_yiedb")]
+[node name="Collectible6" parent="." groups=["collectible"] instance=ExtResource("3_yiedb")]
 position = Vector2(-75, -57)
 
-[node name="Collectible7" parent="." instance=ExtResource("3_yiedb")]
+[node name="Collectible7" parent="." groups=["collectible"] instance=ExtResource("3_yiedb")]
 position = Vector2(9, -121)
 
-[node name="Collectible2" parent="." instance=ExtResource("3_yiedb")]
+[node name="Collectible2" parent="." groups=["collectible"] instance=ExtResource("3_yiedb")]
 position = Vector2(-35, -92)
 
-[node name="Collectible3" parent="." instance=ExtResource("3_yiedb")]
+[node name="Collectible3" parent="." groups=["collectible"] instance=ExtResource("3_yiedb")]
 position = Vector2(55, -92)
 
-[node name="Collectible4" parent="." instance=ExtResource("3_yiedb")]
+[node name="Collectible4" parent="." groups=["collectible"] instance=ExtResource("3_yiedb")]
 position = Vector2(102, -57)
 
-[node name="Collectible5" parent="." instance=ExtResource("3_yiedb")]
+[node name="Collectible5" parent="." groups=["collectible"] instance=ExtResource("3_yiedb")]
 position = Vector2(147, -25)

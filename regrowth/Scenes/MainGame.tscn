@@ -58,7 +58,7 @@ shape = SubResource("RectangleShape2D_kvfik")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Static/Ground"]
 position = Vector2(0, 2000)
-scale = Vector2(300000, 1)
+scale = Vector2(100, 1)
 shape = SubResource("RectangleShape2D_iuea6")
 
 [node name="Moving" type="Node2D" parent="Environment"]
@@ -66,7 +66,7 @@ shape = SubResource("RectangleShape2D_iuea6")
 [node name="Platform" parent="Environment/Moving" instance=ExtResource("4_321ql")]
 position = Vector2(-5, 60)
 
-[node name="Collectible" parent="Environment/Moving" instance=ExtResource("5_321ql")]
+[node name="Collectible" parent="Environment/Moving" groups=["collectible"] instance=ExtResource("5_321ql")]
 position = Vector2(144, 36)
 scale = Vector2(1.5, 1.5)
 
@@ -101,3 +101,21 @@ theme_override_constants/outline_size = 7
 theme_override_font_sizes/font_size = 30
 text = "Score: 1000"
 horizontal_alignment = 2
+
+[node name="GameOver" type="Label" parent="HUD/UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 32
+text = "Game Over. You scored:
+%s points!
+Press \"Jump\" to restart."
+horizontal_alignment = 1

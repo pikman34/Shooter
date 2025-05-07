@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mlqre"]
 size = Vector2(309.5, 56)
 
-[node name="Platform" type="StaticBody2D"]
+[node name="Platform" type="StaticBody2D" groups=["platform"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
@@ -30,6 +30,66 @@ texture = ExtResource("2_mrs20")
 [node name="Sprite2D3" type="Sprite2D" parent="Sprite2D"]
 texture_filter = 1
 position = Vector2(-1.66667, 188.667)
+texture = ExtResource("2_mrs20")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 251.334)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_mrs20")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 315)
+texture = ExtResource("2_mrs20")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 370.667)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_mrs20")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 434.334)
+texture = ExtResource("2_mrs20")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 489)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_mrs20")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 552.667)
+texture = ExtResource("2_mrs20")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 613.667)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_mrs20")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 677.334)
+texture = ExtResource("2_mrs20")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 728.667)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_mrs20")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 792.334)
 texture = ExtResource("2_mrs20")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

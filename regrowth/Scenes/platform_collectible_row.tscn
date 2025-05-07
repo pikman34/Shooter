@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mlqre"]
 size = Vector2(309.5, 56)
 
-[node name="Platform" type="StaticBody2D"]
+[node name="Platform" type="StaticBody2D" groups=["platform"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
@@ -33,27 +33,123 @@ texture_filter = 1
 position = Vector2(-1.66667, 188.667)
 texture = ExtResource("2_te2ks")
 
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 249.333)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 313)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 368.333)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 432.001)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 490)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 553.667)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 611.667)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 675.334)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 730.333)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 794)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 854.667)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 918.334)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 977.333)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D17" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 1041)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D18" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 1101.33)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_te2ks")
+
+[node name="Sprite2D19" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 1165)
+texture = ExtResource("2_te2ks")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(13.75, 37)
 shape = SubResource("RectangleShape2D_mlqre")
 
-[node name="Collectible" parent="." instance=ExtResource("3_lmgvh")]
+[node name="Collectible" parent="." groups=["collectible"] instance=ExtResource("3_lmgvh")]
 position = Vector2(-117, -25)
 
-[node name="Collectible6" parent="." instance=ExtResource("3_lmgvh")]
+[node name="Collectible6" parent="." groups=["collectible"] instance=ExtResource("3_lmgvh")]
 position = Vector2(-76, -25)
 
-[node name="Collectible7" parent="." instance=ExtResource("3_lmgvh")]
+[node name="Collectible7" parent="." groups=["collectible"] instance=ExtResource("3_lmgvh")]
 position = Vector2(9, -25)
 
-[node name="Collectible2" parent="." instance=ExtResource("3_lmgvh")]
+[node name="Collectible2" parent="." groups=["collectible"] instance=ExtResource("3_lmgvh")]
 position = Vector2(-35, -25)
 
-[node name="Collectible3" parent="." instance=ExtResource("3_lmgvh")]
+[node name="Collectible3" parent="." groups=["collectible"] instance=ExtResource("3_lmgvh")]
 position = Vector2(55, -25)
 
-[node name="Collectible4" parent="." instance=ExtResource("3_lmgvh")]
+[node name="Collectible4" parent="." groups=["collectible"] instance=ExtResource("3_lmgvh")]
 position = Vector2(102, -25)
 
-[node name="Collectible5" parent="." instance=ExtResource("3_lmgvh")]
+[node name="Collectible5" parent="." groups=["collectible"] instance=ExtResource("3_lmgvh")]
 position = Vector2(147, -25)

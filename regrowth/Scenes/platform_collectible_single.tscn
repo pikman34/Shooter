@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mlqre"]
 size = Vector2(309.5, 56)
 
-[node name="Platform" type="StaticBody2D"]
+[node name="Platform" type="StaticBody2D" groups=["platform"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
@@ -33,9 +33,93 @@ texture_filter = 1
 position = Vector2(-1.66667, 188.667)
 texture = ExtResource("2_pwyf3")
 
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 250.667)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_pwyf3")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 314.334)
+texture = ExtResource("2_pwyf3")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 371.333)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_pwyf3")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 435)
+texture = ExtResource("2_pwyf3")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 491)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_pwyf3")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 554.667)
+texture = ExtResource("2_pwyf3")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 609.667)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_pwyf3")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66659, 673.334)
+texture = ExtResource("2_pwyf3")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 730.333)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_pwyf3")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 794)
+texture = ExtResource("2_pwyf3")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 856.333)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_pwyf3")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 920)
+texture = ExtResource("2_pwyf3")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 979)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2_pwyf3")
+
+[node name="Sprite2D17" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-1.66658, 1042.67)
+texture = ExtResource("2_pwyf3")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(13.75, 37)
 shape = SubResource("RectangleShape2D_mlqre")
 
-[node name="Collectible" parent="." instance=ExtResource("3_pwyf3")]
+[node name="Collectible" parent="." groups=["collectible"] instance=ExtResource("3_pwyf3")]
 position = Vector2(7, -23)
